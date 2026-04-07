@@ -102,4 +102,30 @@ class ReminderListTest {
             assertThat(list.getSortOrder()).isEqualTo(5);
         }
     }
+
+    @Nested
+    @DisplayName("updateSortOrder()")
+    class UpdateSortOrder {
+
+        @Test
+        @DisplayName("sortOrder를 변경할 수 있다")
+        void sortOrder_업데이트() {
+            ReminderList list = ReminderList.create("업무", "#007AFF", "briefcase", null, 0);
+
+            list.updateSortOrder(5);
+
+            assertThat(list.getSortOrder()).isEqualTo(5);
+        }
+
+        @Test
+        @DisplayName("updateSortOrder() 후 createdAt은 변경되지 않는다")
+        void updateSortOrder_후_createdAt_불변() {
+            ReminderList list = ReminderList.create("업무", "#007AFF", "briefcase", null, 0);
+            LocalDateTime createdAt = list.getCreatedAt();
+
+            list.updateSortOrder(10);
+
+            assertThat(list.getCreatedAt()).isEqualTo(createdAt);
+        }
+    }
 }

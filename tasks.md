@@ -3,33 +3,33 @@
 ## Phase 1 — 뼈대 (Skeleton)
 
 ### Backend
-- [ ] `application.properties` 설정
-  - [ ] H2 file-based datasource (`jdbc:h2:file:./data/reminder`)
-  - [ ] H2 console 활성화 (`spring.h2.console.enabled=true`)
-  - [ ] JPA ddl-auto `update` 설정
-  - [ ] CORS 설정 (`localhost:3000` 허용)
-- [ ] `ReminderList` 도메인
-  - [ ] `ReminderList` 엔티티 (`id`, `name`, `sortOrder`, `createdAt`)
-  - [ ] `ReminderListRepository` (JPA)
-  - [ ] `ReminderListService` (CRUD 로직)
-  - [ ] `ReminderListController`
-    - [ ] `GET /api/lists`
-    - [ ] `POST /api/lists`
-    - [ ] `PUT /api/lists/{id}`
-    - [ ] `DELETE /api/lists/{id}`
-- [ ] `Reminder` 도메인
-  - [ ] `Reminder` 엔티티 (`id`, `listId`, `title`, `completed`, `sortOrder`, `createdAt`, `updatedAt`)
-  - [ ] `ReminderRepository` (JPA)
-  - [ ] `ReminderService` (CRUD 로직)
-  - [ ] `ReminderController`
-    - [ ] `GET /api/lists/{listId}/reminders`
-    - [ ] `POST /api/lists/{listId}/reminders`
-    - [ ] `PUT /api/reminders/{id}`
-    - [ ] `DELETE /api/reminders/{id}`
-- [ ] `GlobalExceptionHandler` (`@RestControllerAdvice`)
-  - [ ] 404 응답 (`EntityNotFoundException`)
-  - [ ] 400 응답 (`MethodArgumentNotValidException`)
-- [ ] 샘플 데이터 초기화 (`CommandLineRunner` 또는 `data.sql`)
+- [x] `application.properties` 설정
+  - [x] H2 file-based datasource (`jdbc:h2:file:./data/reminder`)
+  - [x] H2 console 활성화 (`spring.h2.console.enabled=true`)
+  - [x] JPA ddl-auto `update` 설정
+  - [x] CORS 설정 (`localhost:3000` 허용)
+- [x] `ReminderList` 도메인
+  - [x] `ReminderList` 엔티티 (`id`, `name`, `sortOrder`, `createdAt`)
+  - [x] `ReminderListRepository` (JPA)
+  - [x] `ReminderListService` (CRUD 로직)
+  - [x] `ReminderListController`
+    - [x] `GET /api/lists`
+    - [x] `POST /api/lists`
+    - [x] `PUT /api/lists/{id}`
+    - [x] `DELETE /api/lists/{id}`
+- [x] `Reminder` 도메인
+  - [x] `Reminder` 엔티티 (`id`, `listId`, `title`, `completed`, `sortOrder`, `createdAt`, `updatedAt`)
+  - [x] `ReminderRepository` (JPA)
+  - [x] `ReminderService` (CRUD 로직)
+  - [x] `ReminderController`
+    - [x] `GET /api/lists/{listId}/reminders`
+    - [x] `POST /api/lists/{listId}/reminders`
+    - [x] `PUT /api/reminders/{id}`
+    - [x] `DELETE /api/reminders/{id}`
+- [x] `GlobalExceptionHandler` (`@RestControllerAdvice`)
+  - [x] 404 응답 (`EntityNotFoundException`)
+  - [x] 400 응답 (`MethodArgumentNotValidException`)
+- [x] 샘플 데이터 초기화 (`CommandLineRunner` 또는 `data.sql`)
 
 ### Frontend
 - [ ] Next.js 프로젝트 생성
